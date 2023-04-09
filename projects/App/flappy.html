@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>GeoCache</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Creative Portfolio Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Kross Template v1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="../../image/x-icon" href="../../images/favicon.png" />
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../../plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="../../plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="../../plugins/themify-icons/themify-icons.css">
+
+  <!-- Main Stylesheet -->
+  <link href="../../css/style.css" rel="stylesheet">
+  <title>Flappy Bird</title>
+  <style>
+    body {
+        background-color: #73c8a9;
+        font-family: 'Press Start 2P', cursive;
+        background-image: linear-gradient(to right, #73c8a9, #373b44);
+    }
+
+    canvas {
+        border: 5px solid #2e2e2e;
+        border-radius: 10px;
+        display: block;
+        margin: 50px auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-image: url('assets/soccerbackground.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* we will make the end menu overlap the game canvas, so we need here a lower z-index */
+        z-index: 1;
+    }
+
+    .backdrop-blur {
+        filter: blur(5px);
+    }
+
+    #end-menu {
+        /* we will toggle then the display of the end-menu */
+        display: none;
+        margin: 50px auto;
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 1000;
+    }
+
+    #score-display {
+        color: royalblue;
+        font-size: 2em;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+        background-color: #2e2e2e;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1em;
+        padding: 15px 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.25s ease;
+    }
+
+    button:hover {
+        background-color: #333;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  
+
+<header class="navigation fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-tertiary h3" href="../index.html">Sammy Kao</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../resume.html">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- page  -->
+<section class="page-title bg-primary position-relative">
+    <div id="end-menu">
+        <h4>Game-over!</h4>
+        <p> Score: <span id="end-score"></span></p>
+        <p> Best: <span id="best-score"></span></p>
+        <button id="restart-button">Restart</button>
+    </div>
+    <div id="game-container">
+        <div class="col-12 text-center paragraph-lg">
+            <p style="color:white;">Press Any Key Besides SpaceBar to Jump!</p> 
+        </div>
+        <canvas id="game-canvas" width="300" height="450"></canvas>
+        <div id="score-display">0</div>
+    </div>
+    <script src="flappy.js"></script> 
+</section>
+
+
+
+
+<!-- footer -->
+<footer class="bg-dark">
+  <div class="section">
+        <a style="margin-left:46.5%" class="text-white" href="https://www.instagram.com/sammykao3/" target="blank"><i class="ti-instagram"></i></a>
+        <a style="margin:20px;" class="text-white" href="https://www.linkedin.com/in/sammy-kao-1886811b6" target="blank"><i class="ti-linkedin"></i></a>
+        <a style="margin-right:46%;" class="text-white" href="https://github.com/sammykao" target="blank"><i class="ti-github"></i></a>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="../../plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../../plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="../../plugins/slick/slick.min.js"></script>
+<!-- filter -->
+<script src="../../plugins/shuffle/shuffle.min.js"></script>
+
+<!-- Main Script -->
+<script src="../../js/script.js"></script>
+
+</body>
+</html>
