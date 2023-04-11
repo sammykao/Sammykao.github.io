@@ -26,7 +26,7 @@ async function getMessage() {
         })
     }
     try {
-        const response = await fetch("https://api.openai.com/v1/chat/completions/", options)
+        const response = await fetch("https://api.openai.com/v1/chat/completions", options)
         const data = await response.json()
         console.log(data)
         outPut.textContent = data.choices[0].message.content
